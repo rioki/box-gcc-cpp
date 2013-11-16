@@ -1,0 +1,30 @@
+name: g++
+version: 0.0.1
+inherits: wercker/default@0.0.1
+type: service
+platform: ubuntu@12.04
+description: Wercker box for using GCC C++
+keywords:
+    - gcc
+    - c++
+    - autotools
+packages:
+    - make
+    - gcc@4.6.3
+    - binutils@2.22
+    - automake@1.11.3
+    - autoconf
+script: |
+    sudo apt-get update -y
+    sudo apt-get install make -y
+    sudo apt-get install binutils -y
+    sudo apt-get install g++ -y
+    sudo apt-get install automake -y
+    sudo apt-get install autoconf -y
+    sudo apt-get install libtool -y
+    ld --version
+    gcc --version
+    make --version
+    autoconf --version    
+    automake --version
+    libtool --version
