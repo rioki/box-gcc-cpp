@@ -1,4 +1,4 @@
-name: g++
+name: gcc-cpp
 version: 0.0.1
 inherits: wercker/default@0.0.1
 type: service
